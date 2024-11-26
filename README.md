@@ -41,4 +41,7 @@ Step 2 -> cd Backend_Assignment <br/>
 Step 3 -> ``` npm install ``` <br/>
 Step 4 -> ``` npm start ``` <br/>
 
+You will need .env file in both backend folder and frontend folder : <br/>
+Backend -> .env contains : PORT , MONGO_URI, JWT_SECRET <br/>
+Frontend -> .env contains : REACT_APP_API_BASE_URL <br/>
 Thanks & Regards
