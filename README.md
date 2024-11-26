@@ -3,11 +3,15 @@ My name is Pushkar Choudhary and I am a final year student at Indian Institute o
 <br/>
 I will be highly thankful to you for giving me the opportunity to interview for the role. <br/>
 
+Tech Stacks : <br/>
+<b>Frontend </b> -> React.Js <br/>
+<b> Backend </b> -> Express.Js <br/>
+<b> Database </b> -> MongoDB <br/>
 
 Description of the backend Assignment: <br/>
 
 I have implemented three functionalities : <br/>
-First is Authentication (Register and sign in functionality implemented using JWT) <br/>
+First is Authentication (Register and sign in functionality implemented using JWT , implemented the passowrd hashing using Bcrypt.Js) <br/>
 Second is Authorization (helps in role based access control) <br/>
 Third is Role Based Access Control (Admin can see the list of all users and admin and it is a protected route so other than admin no one can access this dashboard) <br/>
 
