@@ -37,7 +37,7 @@ For the frontend part please refer to video link : https://drive.google.com/file
 
 Now I will guide you through the steps to clone this project in your local machine <br/>
 Step 1 -> Clone the repository : ``` https://github.com/Pushkariiit/VRV_Backend_assignment ``` <br/>
-Step 2 -> cd Bargenix <br/>
+Step 2 -> cd VRV_Backend_assignment <br/>
 Step 3 -> ``` npm install ``` <br/>
 Step 4 -> ``` npm start ``` <br/>
 
