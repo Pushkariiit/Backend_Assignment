@@ -1,6 +1,8 @@
 const bcrypt = require("bcrypt");
 const User = require("../models/User"); // Adjust the path to your User model as needed
+const jwt = require("jsonwebtoken");
 
+// Registration Function
 const register = async (req, res) => {
     try {
         const { username, password, role } = req.body;
@@ -26,9 +28,6 @@ const register = async (req, res) => {
     }
 };
 
-
-const jwt = require("jsonwebtoken");
-
 // Login Function
 const login = async (req, res) => {
     try {
@@ -45,7 +44,7 @@ const login = async (req, res) => {
         // Generate JWT
         const token = jwt.sign(
             { id: user._id, username: user.username, role: user.role },
-            "your_jwt_secret_key", // Replace this with an environment variable for security
+            process.env.JWT_SECRET_KEY || "your_jwt_secret_key", // Use environment variable for better security
             { expiresIn: "1h" }
         );
 
@@ -56,6 +55,7 @@ const login = async (req, res) => {
     }
 };
 
+// Fetch Users with Role "User"
 const getUsersWithRole = async (req, res) => {
     try {
         // Retrieve all users with role "User"
@@ -67,7 +67,16 @@ const getUsersWithRole = async (req, res) => {
     }
 };
 
+// Fetch All Users (Both Admin and User)
+const getAllUsers = async (req, res) => {
+    try {
+        // Retrieve all users
+        const users = await User.find({});
+        res.status(200).json({ users });
+    } catch (error) {
+        console.error("Error fetching all users:", error);
+        res.status(500).json({ error: "Internal server error" });
+    }
+};
 
-
-
-module.exports = { register, login, getUsersWithRole };
+module.exports = { register, login, getUsersWithRole, getAllUsers };

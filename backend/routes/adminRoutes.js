@@ -1,18 +1,8 @@
-// const express = require("express");
-// const router = express.Router();
-// const authorize = require('../middlewares/authorize')
-
-// router.get("/admin-dashboard", authorize(["Admin"]), (req, res) => {
-//     res.status(200).json({ message: `Welcome Admin, ${req.user.username}!` });
-// });
-
-// module.exports = router;
-
 const express = require("express");
 const router = express.Router();
 const authenticate = require("../middlewares/authenticate");
 const authorize = require("../middlewares/authorize");
-const { getUsersWithRole } = require("../controllers/authController");  // Correct import
+const { getUsersWithRole, getAllUsers } = require("../controllers/authController"); // Import the new controller function
 
 // Admin Dashboard Route
 router.get("/admin-dashboard", authenticate, authorize(["Admin"]), (req, res) => {
@@ -21,5 +11,8 @@ router.get("/admin-dashboard", authenticate, authorize(["Admin"]), (req, res) =>
 
 // Get all users with role 'User'
 router.get("/users", authenticate, authorize(["Admin"]), getUsersWithRole);
+
+// Get all users (both Admin and User)
+router.get("/all-users", authenticate, authorize(["Admin"]), getAllUsers);
 
 module.exports = router;
