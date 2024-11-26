@@ -36,7 +36,7 @@ Now I am attaching some sample Api Endpoints from Postman : <br/>
 For the frontend part please refer to video link : https://drive.google.com/file/d/1qZLcGlYCw5LP7McFLCXyl96ij6mu--fQ/view?usp=sharing <br/>
 
 Now I will guide you through the steps to clone this project in your local machine <br/>
-Step 1 -> Clone the repository : ``` https://github.com/Pushkariiit/VRV_Backend_assignmenr ``` <br/>
+Step 1 -> Clone the repository : ``` https://github.com/Pushkariiit/VRV_Backend_assignment ``` <br/>
 Step 2 -> cd Bargenix <br/>
 Step 3 -> ``` npm install ``` <br/>
 Step 4 -> ``` npm start ``` <br/>
